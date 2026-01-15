@@ -2,7 +2,7 @@ import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/dist/query/react";
 
 export const scrobblerApi = createApi({
     reducerPath: 'scrobblerApi',
-    baseQuery: fetchBaseQuery({baseUrl: '/api/'}),
+    baseQuery: fetchBaseQuery({baseUrl: './api/'}),
     endpoints: (builder) => ({
         startClient: builder.mutation<undefined, {
             name: string,

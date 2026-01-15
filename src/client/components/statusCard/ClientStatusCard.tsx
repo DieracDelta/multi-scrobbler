@@ -67,7 +67,7 @@ const ClientStatusCard = (props: ClientStatusCardData) => {
             <div>{scrobbled}: {scrobbledCount}</div>
             <div>Queued Scrobbles: {queued}</div>
             <div><Link to={`/dead?type=${type}&name=${name}`}>Failed Scrobbles</Link>: {deadLetterScrobbles}</div>
-            {hasAuthInteraction ? <a target="_blank" href={`/api/client/auth?name=${name}&type=${type}`}>(Re)authenticate</a> : null}
+            {hasAuthInteraction ? <a target="_blank" href={`./api/client/auth?name=${name}&type=${type}`}>(Re)authenticate</a> : null}
         </Fragment>);
     }
     return (

@@ -126,8 +126,8 @@ function App() {
         <div className="space-x-4 p-6 md:px-10 md:py-6 leading-6 font-semibold bg-gray-800 text-white">
           <div className="container mx-auto">
               <div className="flex items-center justify-between">
-                  <a href="/" className="flex items-center no-underline pr-4">
-                      <img src="/icon.svg" style={{maxWidth: '30px'}}/>
+                  <a href={import.meta.env.BASE_URL} className="flex items-center no-underline pr-4">
+                      <img src={`${import.meta.env.BASE_URL}icon.svg`} style={{maxWidth: '30px'}}/>
                       <span className="ml-2">Multi Scrobbler</span>
                   </a>
                   <Version/>

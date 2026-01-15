@@ -143,7 +143,7 @@ const SourceStatusCard = (props: SourceStatusCardData) => {
             {platformIds.map(x => <Player key={x} data={players[x]} sot={sot}/>)}
             <div>{discovered}: {tracksDiscovered}</div>
             {upstreamRecent}
-            {canPoll && hasAuthInteraction ? <a target="_blank" href={`/api/source/auth?name=${name}&type=${type}`}>(Re)authenticate</a> : null}
+            {canPoll && hasAuthInteraction ? <a target="_blank" href={`./api/source/auth?name=${name}&type=${type}`}>(Re)authenticate</a> : null}
             {type === 'ytmusic' && 'userCode' in data ? <div>Code: <strong>{data.userCode as string}</strong></div> : null}
         </div>);
     }
