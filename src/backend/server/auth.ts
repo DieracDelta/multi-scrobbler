@@ -75,8 +75,9 @@ export const setupAuthRoutes = (app: ExpressWithAsync, logger: Logger, sourceMid
     });
 
     app.getAsync(/.*callback$/, async (req, res, next) => {
+        // Include subpath prefix in redirect for reverse proxy deployments
         if(req.url.indexOf('/api') !== 0) {
-            return res.redirect(307, `/api${req.url}`);
+            return res.redirect(307, `/scrobbler/api${req.url}`);
         }
         const {
             query: {
